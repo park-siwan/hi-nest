@@ -7,7 +7,8 @@ export class MoviesController {
     return 'This will return all movies';
   }
 
-  @Get('/:id')
+  @Get('/:id') //Route handler (method) Decorator
+  //ParameterDecorator
   getOne(@Param('id') movieId: string) {
     return `This will return one movie with the id: ${movieId}`;
   }
