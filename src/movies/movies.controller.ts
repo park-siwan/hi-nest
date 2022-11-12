@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
 @Controller('movies')
 export class MoviesController {
@@ -8,7 +8,7 @@ export class MoviesController {
   }
 
   @Get('/:id')
-  getOne() {
-    return 'This will return one movie';
+  getOne(@Param('id') movieId: string) {
+    return `This will return one movie with the id: ${movieId}`;
   }
 }
