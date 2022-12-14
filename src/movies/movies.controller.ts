@@ -40,7 +40,7 @@ export class MoviesController {
     return this.moviesService.create(movieData);
   }
 
-  @Delete()
+  @Delete(':id')
   remove(@Param('id') movieId: string) {
     // return `This will delete a movie with the id: ${movieId}`;
     return this.moviesService.deleteOne(movieId);
